@@ -13,6 +13,7 @@ const CreateSnippetPage = () => {
         "use server"
         const title = formData.get("title") as string
         const code = formData.get("code") as string
+        
 
         const snippet = await prisma.snippets.create({
             data:{
