@@ -44,7 +44,7 @@ const snippetDetailPage = async ({ params }: SnippetDetailProps) => {
           </form>
         </div>
       </div>
-      <pre className="flex items-center justify-center w-[45vw] h-[45vh] mt-12  bg-gray-400 text-3xl font-bold">
+      <pre className="flex items-center justify-center w-[80vw] min-h-[45vh] mt-12  bg-gray-400 text-3xl font-bold">
         {/* jaisa humne likha hai vaisa dikhane ke liye pre tag ka use liya hai  */}
         {snippet.code}
       </pre>
