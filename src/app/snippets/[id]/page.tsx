@@ -53,3 +53,4 @@ const snippetDetailPage = async ({ params }: SnippetDetailProps) => {
 };
 
 export default snippetDetailPage;
+

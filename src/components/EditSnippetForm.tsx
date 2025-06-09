@@ -25,7 +25,7 @@ const EditSnippetForm = ({snippet}: {snippet:Snippets}) => {
       <Editor
         height={"75vh"}
         width={"77vw"}
-        defaultLanguage="javascript"
+        defaultLanguage="java"
         theme="vs-dark"
         defaultValue={code}
         onChange={changeEventHandler}

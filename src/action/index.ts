@@ -1,6 +1,7 @@
 "use server"
 
 import { prisma } from "@/lib/prisma"
+import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 
 export const saveSnippet = async(id:number, code:string) => {
@@ -13,6 +14,7 @@ export const saveSnippet = async(id:number, code:string) => {
         },
         
     })  
+    revalidatePath("/")
     redirect(`/snippets/${id}`) 
 }
 
@@ -23,5 +25,6 @@ export const deleteSnippet = async(id:number) => {
             id
         }
     })  
+    revalidatePath("/")
     redirect("/")  
 }

@@ -2,13 +2,17 @@ import { Button } from "@/components/ui/button";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 
+
+// export const dynamic = "force-dynamic"; //? isme jo hmaara home route tha vo bhi dynamic ho gaya tha iss line ko likhne se run the command npx next build --no-lint ! Dynamic symbol is f and static symbol is o
+// export const revalidate = 0; //? handle caching according to time
+
 export default async function Home() {
   const snippets = await prisma.snippets.findMany();
 
   return (
     <div>
       <div className="flex items-center justify-between h-16 w-full px-8">
-        <h1 className="text-4xl">Snippets</h1>
+        <h1 className="text-4xl font-semibold">Snippets</h1>
         <Link href={"/snippets/new"}>
           <Button>New</Button>
         </Link>
@@ -40,6 +44,7 @@ export default async function Home() {
           </div>
         );
       })}
+      
     </div>
   );
 }

@@ -30,7 +30,7 @@ const CreateSnippetPage = () => {
     <form action={createSnippet} className='w-full h-screen mt-5 px-20'>
       <div>
         <Label className='py-3 text-4xl font-bold '>Title</Label>
-        <Input type='text' placeholder='' id='title' name='title'/>
+        <Input type='text' placeholder='Write only Java code inside TextArea' id='title' name='title'/>
       </div>
       <div>
         <Label className='py-3 text-4xl font-bold '>Code</Label>
